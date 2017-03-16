@@ -1,11 +1,15 @@
 <div id="container">
     <div id="content">
-        <p>This is the main content</p>
+        <h1>{{ main.activeRoom }}</h1>
+        <ul>
+            <li>This is the message list.</li>
+        </ul>
+        
     </div>
     <div id="sidebar">  
         <h1>Room List</h1>
         <ul>
-            <li ng-repeat="room in main.roomList">{{ room.$value }}</li>
+            <li ng-repeat="room in main.roomList"><a ng-click="main.setActiveRoom(room)" >{{ room.$value }}</a></li>
         </ul>
         <form>
             <div class="form-group">
