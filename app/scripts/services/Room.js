@@ -6,6 +6,7 @@
         
         function addRoom(name) {
             rooms.$add(name);
+            console.log(rooms);
             console.log("added " + name);
         };
         
@@ -14,12 +15,17 @@
             console.log(activeRoom);
         };
         
+        function getActiveRoom() {
+            return activeRoom;
+        }
+        
          /* This return statement makes the expressions within public and accessible */
         return {
             all: rooms,
             addRoom: addRoom,
             activeRoom: activeRoom,
-            setActiveRoom: setActiveRoom
+            setActiveRoom: setActiveRoom,
+            getActiveRoom: getActiveRoom
         }
     }
     
