@@ -7,8 +7,8 @@
         while(currentUser === "" || currentUser === null){
             currentUser = prompt("You did not enter a valid user name. Please try again.");
         }
-        console.log(currentUser);
     }
+      console.log(currentUser);
   }
 
   angular
