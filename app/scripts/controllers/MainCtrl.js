@@ -1,7 +1,11 @@
 (function() {
     function MainCtrl($scope, Room, Message){
         this.room = Room;
-        this.messages = Message;
+        this.messages = [];
+        this.selectRoom = function(room){
+            Room.setActiveRoom(room);
+            this.messages = Message.getByRoomId(room.$id);
+        }
 //        this.roomList = Room.all;
 //        this.addRoom = Room.addRoom;
 //        this.activeRoom = Room.activeRoom;
