@@ -8,15 +8,18 @@
             rooms.$add(name);
             console.log(rooms);
             console.log("added " + name);
-        };
+        }
         
         function setActiveRoom(room) { //why is room working here?
             activeRoom = room.$value;
+            roomId = room.$id;
             console.log(activeRoom);
-        };
+            // trying to get roomId accessible
+            console.log(roomId);
+        }
         
         function getActiveRoom() {
-            return activeRoom;
+            return activeRoom
         }
         
          /* This return statement makes the expressions within public and accessible */

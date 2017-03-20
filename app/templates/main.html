@@ -2,7 +2,7 @@
     <div id="content">
         <h1>{{ main.room.getActiveRoom() }}</h1>
         <ul>
-            <li>This is the message list.</li>
+            <li ng-repeat="message in main.messages.getByRoomId('-KfSxo-m-pa3LDTe-Dxf')">{{ message.content }}</li>
         </ul>
         
     </div>

@@ -1,6 +1,7 @@
 (function() {
-    function MainCtrl($scope, Room){
+    function MainCtrl($scope, Room, Message){
         this.room = Room;
+        this.messages = Message;
 //        this.roomList = Room.all;
 //        this.addRoom = Room.addRoom;
 //        this.activeRoom = Room.activeRoom;
@@ -9,6 +10,6 @@
 
     angular
         .module('blocChat')
-        .controller('MainCtrl', ['$scope', 'Room', MainCtrl]);
+        .controller('MainCtrl', ['$scope', 'Room', 'Message', MainCtrl]);
     
 })();
