@@ -33,7 +33,17 @@
     width: 75%;
 }
 
+#content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 #content li {
     list-style: none;
     background-color: lightblue;
+    padding: 5px 5px 10px 5px;
+}
+
+#content li:nth-child(even) {
+    background-color: lightgray;
 }
