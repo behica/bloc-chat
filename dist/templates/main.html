@@ -2,7 +2,7 @@
     <div id="content">
         <h1>{{ main.room.getActiveRoom() }}</h1>
         <ul>
-            <li ng-repeat="message in main.messages">{{ message.content }}</li>
+            <li ng-repeat="message in main.messages">{{message.username}}:  {{ message.content }}</li>
         </ul>
         <form>
         <div class="form-group">

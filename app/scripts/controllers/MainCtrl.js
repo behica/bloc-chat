@@ -2,11 +2,12 @@
     function MainCtrl($scope, $cookies, Room, Message){
         this.room = Room;
         this.messages = [];
-        this.currentUser = $cookies.get('blocChatCurrentUser');
+        this.currentUser = $cookies.blocChatCurrentUser;
         this.selectRoom = function(room){
             Room.setActiveRoom(room);
             this.messages = Message.getByRoomId(roomId);
             console.log(this.currentUser);
+            console.log(document.cookie);
         }
         
         this.send = function(newMessage){

@@ -7,6 +7,7 @@
         while(currentUser === "" || currentUser === null){
             currentUser = prompt("You did not enter a valid user name. Please try again.");
         }
+    $cookies.put('blocChatCurrentUser', currentUser);
     }
       console.log(currentUser);
   }
